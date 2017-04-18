@@ -20,10 +20,24 @@ h2{
     line-height      : $base__line/20px;
 }
 .hide{
+    //display: none;
     opacity: 0;
     z-index: 0;
 }
 .show{
+    //display: block;
     opacity: 1;
     z-index: 1;
+}
+
+.selected{
+    left: 200px !important;
+    top: 0px !important;
+    transform: scale(0.5) !important;
+    cursor: pointer;
+}
+.selected--sec{
+    left: 20px !important;
+    top: 0px !important;
+    transform: scale(0.3) !important;
 }
