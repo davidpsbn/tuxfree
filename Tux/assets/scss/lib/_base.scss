@@ -58,16 +58,3 @@ p{
     transform : scale(0.1) !important;
     cursor    : pointer;
 }
-
-
-@media screen and(max-width: 1280px){
-    .selected{
-        left      : 10px !important;
-    }
-    .selected--sec{
-        left      : -150px !important;
-    }
-    .selected--thi{
-        left      : -230px !important;
-    }
-}

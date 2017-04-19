@@ -292,19 +292,6 @@ p {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1280px) {
-  .selected {
-    left: 10px !important;
-  }
-
-  .selected--sec {
-    left: -150px !important;
-  }
-
-  .selected--thi {
-    left: -230px !important;
-  }
-}
 .header {
   width: 100%;
   float: left;
@@ -434,29 +421,4 @@ p {
   transition: all 1s ease;
   font-size: 14px;
   color: #9d9d9d;
-}
-
-@media screen and (max-width: 1280px) {
-  .quiz__step {
-    width: 500px !important;
-    height: 500px !important;
-  }
-
-  .text__middle--pm {
-    font-size: 42px !important;
-  }
-
-  .title {
-    font-size: 24px !important;
-  }
-  .title__sec {
-    font-size: 24px !important;
-  }
-  .title__descp {
-    font-size: 24px !important;
-  }
-
-  a {
-    font-size: 23px !important;
-  }
 }
