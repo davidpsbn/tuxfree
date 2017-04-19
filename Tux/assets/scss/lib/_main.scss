@@ -106,16 +106,20 @@
     .info{
         width         : 300px;
         float         : right;
-        height        : 410px;
+        height        : 345;
         overflow      : hidden;
         transition    : all 1s ease; 
         .info--final{
             float            : right;
             width            : calc(300px - 30px);
-            height           : 250px;
+            height           : 225px;
             background       : rgba(0, 0, 0, 0.35);
             padding          : 15px;
             margin-bottom    : 20px;
+            p{
+                -webkit-margin-before: 0em;
+                -webkit-margin-after: 0em;
+            }
         }
     }
 
