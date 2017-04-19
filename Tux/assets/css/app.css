@@ -245,6 +245,16 @@ h2 {
   line-height: 1.2;
 }
 
+p {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  color: #fff;
+}
+
+.center {
+  text-align: center;
+}
+
 .hide {
   opacity: 0;
   z-index: 0;
@@ -255,11 +265,14 @@ h2 {
   z-index: 1;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 .selected {
   left: 200px !important;
   top: 0px !important;
   transform: scale(0.5) !important;
-  cursor: pointer;
 }
 
 .selected--sec {
@@ -268,6 +281,25 @@ h2 {
   transform: scale(0.3) !important;
 }
 
+.selected--thi {
+  left: -80px !important;
+  top: 0px !important;
+  transform: scale(0.1) !important;
+}
+
+@media screen and (max-width: 1280px) {
+  .selected {
+    left: 10px !important;
+  }
+
+  .selected--sec {
+    left: -150px !important;
+  }
+
+  .selected--thi {
+    left: -230px !important;
+  }
+}
 .header {
   width: 100%;
   float: left;
@@ -324,7 +356,7 @@ h2 {
   transform: translate(-50%);
   transition: all 1s ease;
 }
-.container .quiz__step span {
+.container .quiz__step .text__middle {
   width: 100%;
   position: absolute;
   left: 50%;
@@ -342,6 +374,17 @@ h2 {
   line-height: 1.2;
   transition: font-size 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
+.container .quiz__step .title {
+  font-size: 27px;
+}
+.container .quiz__step .title__sec {
+  text-decoration: underline;
+  font-size: 27px;
+}
+.container .quiz__step .title__descp {
+  text-decoration: none;
+  font-size: 27px;
+}
 .container .quiz__step a {
   padding: 0 25px;
   font-size: 26px;
@@ -353,12 +396,58 @@ h2 {
 .container .quiz__step a:hover {
   text-decoration: underline;
 }
+.container .info {
+  width: 300px;
+  float: right;
+  height: 410px;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+.container .info .info--final {
+  float: right;
+  width: calc(300px - 30px);
+  height: 250px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 15px;
+  margin-bottom: 20px;
+}
 
 .footer {
   float: left;
   width: 100%;
+  margin-top: -140px;
 }
-.footer__info {
+.footer__info--sub {
   font-size: 14px;
   color: #9d9d9d;
+}
+.footer .subtitle {
+  transition: all 1s ease;
+  font-size: 14px;
+  color: #9d9d9d;
+}
+
+@media screen and (max-width: 1280px) {
+  .quiz__step {
+    width: 500px !important;
+    height: 500px !important;
+  }
+
+  .text__middle--pm {
+    font-size: 42px !important;
+  }
+
+  .title {
+    font-size: 24px !important;
+  }
+  .title__sec {
+    font-size: 24px !important;
+  }
+  .title__descp {
+    font-size: 24px !important;
+  }
+
+  a {
+    font-size: 23px !important;
+  }
 }

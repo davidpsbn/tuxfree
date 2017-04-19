@@ -1,41 +1,71 @@
 $( document ).ready(function(){
-    $(".quiz .quiz__step .yes").on('click', function(){
-        $(this).parents('.quiz__step').next('.quiz__step').addClass('show');
-        $(this).siblings('a').css("display","none");
-        $(this).parents('.quiz__step').addClass('selected');
-    }); 
-    
-     $(".quiz .quiz__step:nth-child(2) .yes").on('click', function(){
-        $(this).parents('.quiz__step').prev('.quiz__step').addClass('selected--sec');
-    }); 
-
-    $(".quiz .quiz__step .restart").on('click', function(){
-        $(this).parents('.quiz__step').prev('.quiz__step').removeClass('selected','selected--sec');
-        $(this).parents('.quiz__step').removeClass('show');
-        $('.quiz__step .no').css('display','inline-block');
-
+    var allCircles = '.c1-1, .c1-2, .c1-2-1, .c1-2-2, .c1-2-3, .c1-2-3-1';
+    var allOptions = '.a1-1, .a1-2, .a1-2-1, .a1-2-2, .a1-2-3, .a1-2-3-1'; 
+//Circle 1 - Option 1 Selected
+    $('.a1-1').on('click', function(){   
+        $('.c1-1').addClass('show');
+        $('.a1-2').css("display","none");
+        $('.c1').addClass('selected');
     });
 
-    //When choosing NO
-    $(".quiz .quiz__step .no").on('click', function(){
-        $(this).parents('.quiz__step').addClass('selected');
-        $(this).parents('.quiz__step').siblings('.quiz__step--not').addClass('show');
-        $(this).siblings('a').css("display","none");
-    }); 
-     $(".quiz .quiz__step--not .zerob, .one, .minus-equal-two").on('click', function(){
-        $('.selected').addClass('selected--sec');
-        $(this).siblings('a').css("display","none");
-        $(this).parents('.quiz__step').addClass('selected');
-        $(this).parents('.quiz__step').next('.quiz__step').addClass('show');
+    //Circle 1 - Option 2 Selected 
+    $('.a1-2').on('click', function(){   
+        $('.c1-2').addClass('show');
+        $('.a1-1').css("display","none");
+        $('.c1').addClass('selected');
     }); 
 
-    $(".quiz .quiz__step--no .restart").on('click', function(){
-        $('.quiz__step .one, .minus-equal-two   ').css('display','inline-block');
-        $(this).parents('.quiz__step').removeClass('show');
-         $(this).parents('.quiz__step').prev('.quiz__step').removeClass('show');
-        $('.show').removeClass('selected selected--sec');
-        $(this).parents('.quiz__step').removeClass('show');
-        $('.quiz__step .yes').css('display','inline-block');
+        //Circle 1 -> 2 - Option 1 Selected 
+        $('.a1-2-1').on('click', function(){   
+            $('.c1-2-1').addClass('show');
+            $('.a1-2-2, .a1-2-3').css("display","none");
+            $('.c1-2').addClass('selected');
+            $('.c1').addClass('selected--sec');
+        });
+
+        //Circle 1 -> 2 - Option 2 Selected 
+        $('.a1-2-2').on('click', function(){   
+            $('.c1-2-2').addClass('show');
+            $('.a1-2-1, .a1-2-3').css("display","none");
+            $('.c1-2').addClass('selected');
+            $('.c1').addClass('selected--sec');
+        });
+
+        //Circle 1 -> 2 - Option 3 Selected 
+        $('.a1-2-3').on('click', function(){   
+            $('.c1-2-3').addClass('show');
+            $('.a1-2-1, .a1-2-2').css("display","none");
+            $('.c1-2').addClass('selected');
+            $('.c1').addClass('selected--sec');
+        });
+
+            //Circle 1 -> 2 -> 3 Next Selected 
+            $('.a1-2-3-1').on('click', function(){   
+                $('.c1-2-3-1').addClass('show');
+                $('.c1-2-3').addClass('selected');
+                $('.c1-2').addClass('selected--sec');
+                $('.c1').addClass('selected--thi');
+                $('.info').removeClass('hide');
+            }); 
+
+    //Restart to 1st Circle       
+    $('.restart').on('click', function(){   
+        $(allCircles).removeClass('show selected selected--sec');
+        $('a').css('display','inline-block');
+        $('.c1').removeClass('selected selected--sec selected--thi');
+        $('.subtitle, .info').addClass('hide');
     });
 
+    //Show Subtitle
+    $(allOptions).on('click', function(){   
+        $('.subtitle').removeClass('hide');
+    });   
+
+    //Show last info on filter box    
+    $('.back').on('click', function(){ 
+        $('.c1-2-1, .c1-2-2').removeClass('show');  
+        $('.c1-2').removeClass('selected');
+        $('.c1').removeClass('selected--sec');
+        $('.a1-2-1, .a1-2-2, .a1-2-3').css('display','inline-block');
+    });   
 }); 

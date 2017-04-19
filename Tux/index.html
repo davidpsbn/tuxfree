@@ -6,9 +6,10 @@
     <script src="assets/js/jquery-3.2.1.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/app.js"></script>
-	<meta charset="utf8">
+	<meta charset="utf-8">
 </head>
 <body>
+    <!--// HEADER //-->
     <header class="header">
         <div class="header__text">
             <h2>
@@ -21,42 +22,85 @@
             </h1>
         </div>
     </header>
+    <!--// !HEADER //-->
+    <!--// MAIN //-->
     <section class="container">
+        <!--// QUIZ CIRCLES //-->
         <div class="quiz">
-            <div class="quiz__step show">
-                <span class="select">
-                    <p>Válvulas mecânicas<br>ou estenose<br>mitral moderada<br>a severa</p>
-                    <a class="yes" href="#">sim</a>
-                    <a class="no" href="#">não</a>
+            <div class="quiz__step c1 show">
+                <span class="text__middle">
+                    <p class="text__middle--pm">Válvulas mecânicas<br>ou estenose<br>mitral moderada<br>a severa</p>
+                    <a class="a1-1" href="#">sim</a>
+                    <a class="a1-2" href="#">não</a>
                 </span>
             </div>
-            <div class="quiz__step hide">
-                <span>
-                    <p>AVK (IA)c,d</p>
+            <div class="quiz__step c1-1 hide">
+                <span class="text__middle">
+                    <p class="text__middle--pm">AVK (IA)c,d</p>
                     <a class="restart" href="#">recomeçar</a>
                 </span>
             </div>
-            <div class="quiz__step quiz__step--not hide">
-                <span>
-                    <p>Calcular risco<br>de AVC com base<br>nos factores de risco<br>CHA2DS-VAScª</p>
-                    <a class="zerob" href="#">0b</a>
-                    <a class="one" href="#">1</a>
-                    <a class="minus-equal-two" href="#">>2</a>
+            <div class="quiz__step c1-2 hide ">
+                <span class="text__middle">
+                    <p class="text__middle--pm">Calcular risco<br>de AVC com base<br>nos factores de risco<br>CHA2DS-VAScª</p>
+                    <a class="a1-2-1" href="#">0b</a>
+                    <a class="a1-2-2" href="#">1</a>
+                    <a class="a1-2-3" href="#">>2</a>
                 </span>
             </div>
-            <div class="quiz__step quiz__step--no hide">
-                <span>
-                    <p>0b<br>Sem tratamento<br>antiplaquetar<br>ou anticoagulante(IIIB)</p>
+            <div class="quiz__step c1-2-1 hide">
+                <span class="text__middle">
+                    <p class="text__middle--pm">0b<br>Sem tratamento<br>antiplaquetar<br>ou anticoagulante(IIIB)</p>
+                    <a class="back" href="#">voltar</a>
+                </span>
+            </div>
+            <div class="quiz__step c1-2-2 hide">
+                <span class="text__middle">
+                    <p class="text__middle--pm">1<br>ACO deve ser<br>considarado (IIaB)</p>
+                    <a class="back" href="#">voltar</a>
+                </span>
+            </div>
+            <div class="quiz__step c1-2-3 hide">
+                <span class="text__middle">
+                    <p>>2</p>
+                    <p class="title__sec">Anticoagulação Oral Indicada</p>
+                    <p class="title__descp">Avaliar contraindicações<br>Corrigir factores de risco<br>hemorrágico reversiveis</p>
+                    <a class="a1-2-3-1" href="#">continuar</a>
+                </span>
+            </div>
+            <div class="quiz__step c1-2-3-1 hide">
+                <span class="text__middle">
+                    <p class="text__middle--pm">NOAC (IA)c</p>
                     <a class="restart" href="#">recomeçar</a>
                 </span>
-            </div>
-            
+            </div>      
         </div>
+        <!--// !QUIZ CIRCLES //-->
+         <!--// INFO FILTER BOX //-->
+        <div class="info hide">
+            <div class="info--final">
+                <p>Encerramento percutâneo da AAE pode ser considerado em doentes com contraindicações claras para ACO (llbC)</p>
+            </div>
+            <div class="info--final bold center">
+                <p>AKV (IA)c,d</p>
+            </div>
+        </div>
+        <!--// !INFO FILTER BOX //-->
     </section>
+    <!--// !MAIN //-->
+    <!--// FOOTER //-->
     <footer class="footer">
         <div class="footer__info">
-            <p>Kirchhof P. et al. 2016 ESC Guidelines for the management of atrial fibrillation<br>developed in collaboration with EACTS. European Heart Journal (2016) 37, 2893–2962.</p>
+            <p class="subtitle hide"><strong>AVC</strong> = Acidente Vascular Cerebral; <strong>ACO</strong> = Anticoagulação;<br>
+            <strong>AAE</strong> = Apêndice Auricular Esquer-do; <strong>NOAC</strong> = Anticoagulantes Orais<br>
+            não-antagonistas da Vitamina K; <strong>AVK</strong> = Antagonistas da Vitamina K.<br>
+            <strong>a)</strong> Insuficiência Cardíaca Congestiva, Hipertensão, Idade ≥ 75 anos (2 pontos), Diabetes,<br>
+            AVC/AIT/TE prévio (2 pontos), Doença vascular, Idade 65-74 anos, Género feminino.<br>
+            <strong>b)</strong> Inclui mulheres com outros fatores de risco de AVC. c) IIaB para mulheres com apenas<br>
+            1 fator de risco de AVC adicional. d) IB para doentes com válvulas mecânicas ou estenose mitral.</p>
+            <p class="footer__info--sub">Kirchhof P. et al. 2016 ESC Guidelines for the management of atrial fibrillation<br>developed in collaboration with EACTS. European Heart Journal (2016) 37, 2893–2962.</p>
         </div>
     </footer>
+    <!--// !FOOTER //-->
 </body>
 </html>

@@ -55,7 +55,7 @@
             transform       : translate(-50%);  
             transition      : all 1s ease; 
         
-            span{
+            .text__middle{
                 width              : 100%;
                 position           : absolute;  
                 left               : 50%;
@@ -72,7 +72,20 @@
                 -webkit-margin-start  : 60px;
                 -webkit-margin-end    : 60px;
                 line-height           : 1.2; 
-                transition            : font-size 1s cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+                transition            : font-size 1s cubic-bezier(0.445, 0.050, 0.550, 0.950);
+            }
+
+            .title{
+                font-size       : 27px;
+                &__sec{
+                    text-decoration     : underline;
+                    font-size           : 27px;
+                }
+                &__descp{
+                    text-decoration     : none;
+                    font-size           : 27px;
+                }
+                
             }
 
             a{
@@ -90,15 +103,62 @@
             }
         }
     }
+    .info{
+        width         : 300px;
+        float         : right;
+        height        : 410px;
+        overflow      : hidden;
+        transition    : all 1s ease; 
+        .info--final{
+            float            : right;
+            width            : calc(300px - 30px);
+            height           : 250px;
+            background       : rgba(0, 0, 0, 0.35);
+            padding          : 15px;
+            margin-bottom    : 20px;
+        }
+    }
+
 }
 
 .footer{
-    float     : left;
-    width     : 100%;
+    float        : left;
+    width        : 100%;
+    margin-top   : -140px;
     &__info{
-        font-size  : 14px;
-        color      : $grey;
+        &--sub{
+            font-size  : 14px;
+            color      : $grey;
+        }
+    }
+    .subtitle{
+        transition      : all 1s ease; 
+        font-size       : 14px;
+        color           : $grey;
     }
 }
 
 
+@media screen and(max-width: 1280px){
+    .quiz__step{
+        width:500px !important;
+        height:500px !important;
+    }
+    .text__middle{
+        &--pm{
+            font-size  : 42px !important;
+        }
+    }
+    .title{
+        font-size  : 24px !important;
+        &__sec{
+            font-size    : 24px !important;
+        }
+        &__descp{
+            font-size    : 24px !important;
+        }
+    }
+    a{
+        font-size        : 23px !important;        
+    }
+}
