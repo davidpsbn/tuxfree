@@ -86,6 +86,7 @@ $( document ).ready(function(){
             $(this).prevAll('.quiz__step').removeClass('selected--sec');
             $(this).prevAll('.selected--thi').addClass('selected--sec');
             $(this).prevAll('.quiz__step').removeClass('selected--thi');
+            $('.info').addClass('hide');
         } else if (checkPos == selectedSecPos ){
             $(this).removeClass('selected--sec selected');
             $(this).find('span a').css("display", "inline-block");
@@ -93,11 +94,12 @@ $( document ).ready(function(){
             $(this).nextAll('.quiz__step').removeClass('selected')
             $('span a').css("display", "inline-block");
             $('.c1').removeClass('selected--thi selected--sec');
+            $('.info').addClass('hide');
         } else if (checkPos == selectedThiPos ){
             $(allCircles).removeClass('show selected selected--sec');
             $('a').css('display','inline-block');
             $('.c1').removeClass('selected selected--sec selected--thi');
-            $('.subtitle, .info').addClass('hide');
+            $('.info').addClass('hide');
         }
     });
 
