@@ -133,12 +133,14 @@
         &--sub{
             font-size  : 14px;
             color      : $grey;
+             font-family     : $font-family--secondary; 
         }
     }
     .subtitle{
         transition      : all 1s ease; 
         font-size       : 14px;
         color           : $grey;
+        font-family     : $font-family--secondary; 
     }
 }
 
