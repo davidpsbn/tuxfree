@@ -91,7 +91,7 @@ $( document ).ready(function(){
             $(this).find('span a').css("display", "inline-block");
             $(this).nextAll('.quiz__step').removeClass('show');
             $(this).nextAll('.quiz__step').removeClass('selected')
-            $(this).prevAll('span a').css("display", "inline-block");
+            $('span a').css("display", "inline-block");
             $('.c1').removeClass('selected--thi selected--sec');
         } else if (checkPos == selectedThiPos ){
             $(allCircles).removeClass('show selected selected--sec');
